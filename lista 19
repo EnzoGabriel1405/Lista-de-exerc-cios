@@ -1,0 +1,20 @@
+/*    • Escreva um programa que simule um jogo de adivinhação, onde o computador escolhe um número aleatório e o usuário tenta adivinhar.
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(){
+    srand(time(NULL));
+    int n = rand() % 100;
+    int a;
+    printf("adivinhe o número secreto (de 1 a 100): ");
+    scanf("%d", &a);
+    if(a==n){
+        printf("parabéns! você acertou!");
+    }else{
+        printf("infelizmente você errou!");
+    }
+    
+    return 0;
+}
